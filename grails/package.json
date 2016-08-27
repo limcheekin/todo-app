@@ -1,0 +1,43 @@
+{
+  "name": "todo-app-backend",
+  "version": "0.0.1",
+  "description": "Grails backend for the Todo App",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/limcheekin/todo-app.git"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "bundle": "webpack",
+    "test": "mocha mocha.config.js './src/test/js/**/*.spec.js' --compilers js:babel-core/register"
+  },
+  "author": "Lim Chee Kin",
+  "license": "APACHE",
+  "devDependencies": {
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.0",
+    "css-loader": "^0.23.1",
+    "expect": "^1.20.1",
+    "expect-jsx": "^2.6.0",
+    "file-loader": "^0.8.5",
+    "img-loader": "^1.2.2",
+    "jsdom": "^9.3.0",
+    "mocha": "^2.5.3",
+    "react-addons-test-utils": "^15.1.0",
+    "react-hot-loader": "^1.3.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.0",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "immutable": "^3.8.1",
+    "react": "^15.1.0",
+    "react-bootstrap": "^0.29.5",
+    "react-dom": "^15.1.0"
+  }
+}
