@@ -6,7 +6,7 @@ module.exports = {
     entry: [
         'webpack-dev-server/client?http://localhost:3000',
         'webpack/hot/only-dev-server',
-        './src/main/js/app/app.js'
+        './src/main/js/app/index.js'
     ],
     output: {
         path: __dirname + '/grails-app/assets/javascripts/',

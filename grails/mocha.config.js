@@ -2,13 +2,13 @@
 
 // Tests are placed alongside files under test.
 // This file does the following:
-// 1. Sets the environment to 'production' so that
+// 1. Sets the environment to 'test' so that
 //    dev-specific babel config in .babelrc doesn't run.
 // 2. Disables Webpack-specific features that Mocha doesn't understand.
 
 // This assures the .babelrc dev config (which includes
 // hot module reloading code) doesn't apply for tests.
-process.env.NODE_ENV = 'production';
+process.env.NODE_ENV = 'test';
 
 // Disable webpack-specific features for tests since
 // Mocha doesn't know what to do with them.
@@ -21,3 +21,4 @@ require.extensions['.png'] = function () {
 require.extensions['.jpg'] = function () {
     return null;
 };
+
