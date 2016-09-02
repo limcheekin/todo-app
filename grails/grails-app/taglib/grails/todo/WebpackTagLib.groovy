@@ -1,4 +1,4 @@
-package grails.react.starter
+package grails.todo
 
 import grails.util.Environment
 import org.springframework.beans.factory.annotation.Value

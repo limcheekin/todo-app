@@ -48,9 +48,9 @@ environments:
 ---
 ---
 grails:
-    profile: web
+    profile: web, rest-api
     codegen:
-        defaultPackage: grails.react.starter
+        defaultPackage: grails.todo
     spring:
         transactionManagement:
             proxies: false
@@ -60,10 +60,16 @@ info:
         version: '@info.app.version@'
         grailsVersion: '@info.app.grailsVersion@'
 spring:
-
     groovy:
         template:
             check-template-location: false
+
+# Spring Actuator Endpoints are Disabled by Default
+endpoints:
+    enabled: true
+    jmx:
+        enabled: true
+        unique-names: true
 
 ---
 grails:
@@ -117,9 +123,6 @@ grails:
                 scriptlets: html
                 taglib: none
                 staticparts: none
-endpoints:
-    jmx:
-        unique-names: true
 
 server:
     port: 8080
@@ -130,3 +133,7 @@ webpack:
     url: http://localhost:3000
   asset:
     path: '/assets/'
+    
+#REF: http://giri-tech.blogspot.my/2016/06/create-secured-restful-api-app-with.html 
+management:
+    context-path: /api/management    

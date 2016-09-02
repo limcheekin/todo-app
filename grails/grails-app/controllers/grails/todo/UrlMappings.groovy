@@ -1,4 +1,4 @@
-package grails.react.starter
+package grails.todo
 
 class UrlMappings {
 
@@ -9,8 +9,8 @@ class UrlMappings {
             }
         }
 
-        "/"(view:"/index")
-        "500"(view:'/error')
-        "404"(view:'/notFound')
+        "/"(view: '/application/index')
+        "500"(view: '/error')
+        "404"(view: '/notFound')
     }
 }
